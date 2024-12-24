@@ -16,6 +16,7 @@ fn main() {
     files.push(FilePath { target_path: format!("{}/.ssh", home_dir), file_name: String::from("id_rsa.pub") });
     files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".gnupg") });
     files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".password-store") });
+    files.push(FilePath { target_path: format!("{}/.config", home_dir), file_name: String::from("snipets") });
 
     let args: Vec<String> = env::args().collect();
     let argument = &args[1];
