@@ -14,9 +14,13 @@ fn main() {
     files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".gitconfig") });
     files.push(FilePath { target_path: format!("{}/.ssh", home_dir), file_name: String::from("id_rsa") });
     files.push(FilePath { target_path: format!("{}/.ssh", home_dir), file_name: String::from("id_rsa.pub") });
-    files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".gnupg") });
-    files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".password-store") });
     files.push(FilePath { target_path: format!("{}/.config", home_dir), file_name: String::from("snipets") });
+    files.push(FilePath { target_path: format!("{}/.config", home_dir), file_name: String::from("env-snipets") });
+    files.push(FilePath { target_path: format!("{}/.config/zsh", home_dir), file_name: String::from(".zshenv") });
+    files.push(FilePath { target_path: format!("{}/.config", home_dir), file_name: String::from(".bwsconfig") });
+    files.push(FilePath { target_path: format!("{}/.config", home_dir), file_name: String::from("vpn") });
+    files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".aws") });
+    files.push(FilePath { target_path: format!("{}", home_dir), file_name: String::from(".kube") });
 
     let args: Vec<String> = env::args().collect();
     let argument = &args[1];
